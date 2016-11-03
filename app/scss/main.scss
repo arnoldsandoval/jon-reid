@@ -1,0 +1,53 @@
+@import 'normalize';
+@import 'video';
+
+$duration: .20;
+$easing: ease-in-out;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system,Roboto,Helvetica,Arial,sans-serif;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+h1{font-weight:400}
+h3{font-weight:300}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.is-loaded {
+  .content, .component-video {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
+  .load-indicator {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+}
+
+.is-loading {
+  .content, .component-video {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  .load-indicator{
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
+}

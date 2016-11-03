@@ -1,0 +1,35 @@
+.load-indicator {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -40px;
+  text-align: center;
+  .child {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background-color: #757575;
+    border-radius: 100%;
+    display: inline-block;
+    animation: a 1.4s ease-in-out 0s infinite both;
+    &.bounce1 {
+      animation-delay: -.32s
+    }
+    &.bounce2 {
+      animation-delay: -.16s
+    }
+  }
+}
+
+
+
+@keyframes a {
+  0%, 80%, to {
+    transform: scale(0)
+  }
+  40% {
+    transform: scale(1)
+  }
+}
