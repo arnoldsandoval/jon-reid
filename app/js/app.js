@@ -1,4 +1,5 @@
 import React from 'react'
+import { Router } from 'react-router';
 import YouTube from 'react-youtube'
 import Button from './components/button/button.component'
 import LoadIndicator from './components/load-indicator/load-indicator.component'
@@ -62,7 +63,7 @@ require('../scss/main.scss')
         <div className='bg-video'>
           <YouTube
             className='component-video'
-            videoId='kPyDTbgjDG8'
+            videoId='TxEG-764pkI'
             opts={opts}
             onReady={this._videoOnReady}
             onStateChange={this._videoOnStateChange.bind(this)} />
